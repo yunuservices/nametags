@@ -3,6 +3,9 @@ name: Build Gradle Project
 
 # This action will run every time you push to the "dev" branch.
 on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 0 1 1 *"
   push:
     branches:
     - "dev"
